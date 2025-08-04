@@ -29,21 +29,24 @@ t_metodo = datos %>%
 comp_metodo = t_metodo %>%
   mutate(Método = reorder(metodo_est, Tiempo_m)) %>%
   ggplot(aes(x = metodo_est, y = Tiempo_m)) +
-  geom_point(size = 0.8, color = "blue") +
+  geom_point(size = 1.5, color = "blue") +
   geom_errorbar(aes(ymin = Tiempo_m - Tiempo_sd,
                     ymax = Tiempo_m + Tiempo_sd),
                 width = 0.2, color = "black") +
   labs(title = "Comparison of time-averaged clustering methods and number of strata",
        x = "Clustering method and number of strata",
        y = "Time average (s)") +
-  theme_minimal() +
   coord_flip() +  # Para hacerlo horizontal (opcional)
   theme(plot.title = element_text(size = 26, face = "bold", hjust = 0.5),
         axis.title.x = element_text(size = 22, face = "bold"),
         axis.title.y = element_text(size = 22, face = "bold"),
         axis.text = element_text(size = 18),
         legend.title = element_text(size = 18),
-        legend.text = element_text(size = 18))
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white", color = NA),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+# theme_minimal() 
 
 print(comp_metodo)
 
