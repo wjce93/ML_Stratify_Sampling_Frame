@@ -28,7 +28,7 @@ data_cla_g = melt(data[,c(22,21,27,37,43)], # seleccionar las variables
                   variable.name = "variable", 
                   value.name = "value")
 
-nombres = c("Head of household’s educational attainment ", "Affiliation to social security",
+nombres = c("Educ. attainment of the head of household", "Affiliation to social security",
             "Material index", "Cell/mobile phone with service")
 
 gra_cla = data_cla_g %>%

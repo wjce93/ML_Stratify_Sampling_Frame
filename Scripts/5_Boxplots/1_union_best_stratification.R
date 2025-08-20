@@ -15,9 +15,9 @@ consolidado %<>%
          estratos_cla_3 = LH_Kozak_k3,
          estratos_cla_4 = LH_Kozak_k4,
          estratos_cla_5 = Dalenius_k5,
-         estratos_ml_3 = MiniBatchKMeans_k3,
-         estratos_ml_4 = KMeans_k4,
-         estratos_ml_5 = KMeans_k5
+         estratos_ml_3 = GMM_k3,
+         estratos_ml_4 = MiniBatchKMeans_k4,
+         estratos_ml_5 = MiniBatchKMeans_k5
          )
 
 # Proporcion de UPM en los estratos
